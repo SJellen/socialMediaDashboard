@@ -6,16 +6,10 @@
 <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Social Media Dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
   <div class="top-word-box">
     <h1>Social Media Dashboard</h1>
     <h3>
@@ -24,12 +18,19 @@
   </div>
 
   <div class="switch-box">
-    Dark Mode
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
+    <h3>Dark Mode</h3>
+    <a><svg  id="themeButton" width="60" height="30" >
+      <rect x="0" y="0" width="60" height="30" fill="#ddd" fill="15" />
+      <circle onclick="toggleTheme()" cx="15" cy="15" r="12" fill="#ffff" />
+      
+    </svg> </a> 
   </div>
+
+  <div class="top-banner">
+
+  </div>
+
+ 
 
 
   <div class="grid-container">
@@ -67,7 +68,9 @@
   </div>
 
 
+ <div class="mid-word-box">
   <h2>Overview - Today</h2>
+ </div>
 
 
   <div class="grid-container2">

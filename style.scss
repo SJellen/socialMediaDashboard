@@ -25,12 +25,26 @@ $darkGrayishBlue: hsl(228, 12%, 44%);
 $veryDarkBlue: hsl(230, 17%, 14%);
 
 
+:root {
+  --background: hsl(0, 0%, 100%);
+  --top-banner: hsl(225, 100%, 98%);;
+  --text: hsl(230, 17%, 14%);
+  --text2: hsl(228, 12%, 44%);
+  --cardBG: hsl(227, 47%, 96%);
+
+}
+
+#dark {
+  --background: hsl(230, 17%, 14%);
+  --top-banner: hsl(232, 19%, 15%); 
+  --text: hsl(0, 0%, 100%);
+  --text2: hsl(228, 34%, 66%);
+  --cardBG: hsl(228, 28%, 20%);
 
 
 
 
-
-
+}
 
 
 
@@ -38,9 +52,20 @@ $veryDarkBlue: hsl(230, 17%, 14%);
 body {
     font-family: 'Inter', sans-serif; 
     margin: 0;
-    padding: 0 10%;
+    padding: 0;
+    background-color: var(--background);
     
-    
+}
+
+.top-banner {
+  background-color: var(--top-banner);
+  width: 100%;
+  min-height: 245px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: relative;
+  z-index: -1;
+  margin-top: -8.75rem;
 }
 
 
@@ -51,15 +76,18 @@ body {
     grid-template-rows: 1fr;
     gap: 30px 30px;
     grid-template-areas: ". . . .";
-    background-color: mediumblue;
-    padding: 10px;
+    padding: 0 10%;
+    margin-top: -6.75rem;
   }
 
   .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--cardBG);
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
+    border: 1px solid red;
+    width: 255px;
+    border-radius: 5px;
   }
 
 
@@ -68,18 +96,63 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.25fr 0.25fr;
     gap: 30px 30px;
-    background-color: mediumblue;
-    padding: 10px;
+    padding: 0 10%;
+    padding-bottom: 75px;
     grid-template-areas: ". . . ." ". . . .";
   }
 
   .grid-container2 > div {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--cardBG);
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
+    border: 1px solid red;
+    width: 255px;
+    border-radius: 5px;
+    
   }
 
-  .item1 {
-      background-color: red;
+  .switch-box {
+    float: right;
+    border: 1px solid red;
+    color: var(--text2);
+    margin-right: 10.5%;
+    margin-top: 2rem;
+    
+    h3 {
+      font-size: .9rem;
+      margin-right: 5rem;
+    }
+    a {
+      float: right;
+      margin-top: -2.25rem;
+    }
+  }
+  
+
+  .top-word-box {
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    h1 {
+      color: var(--text);
+      font-size: 1.75rem;
+    }
+    h3 {
+      color: var(--text2);
+      margin-top: -1rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  #themeButton {
+    border-radius: 30px;
+  }
+
+  .mid-word-box {
+   color: var(--text);
+   margin-left: 10%;
+   padding: 2rem 0;
   }
