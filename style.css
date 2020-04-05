@@ -44,8 +44,10 @@ body {
       grid-template-rows: 1fr;
   gap: 30px 30px;
       grid-template-areas: ". . . .";
-  padding: 0 10%;
+  padding: 0;
   margin-top: -6.75rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .grid-container .tag {
@@ -178,7 +180,9 @@ body {
   -ms-grid-rows: 0.25fr 0.25fr;
       grid-template-rows: 0.25fr 0.25fr;
   gap: 30px 30px;
-  padding: 0 10%;
+  padding: 0;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-bottom: 75px;
       grid-template-areas: ". . . ." ". . . .";
 }
@@ -239,7 +243,7 @@ body {
 .switch-box {
   float: right;
   color: #aeb3cb;
-  margin-right: 10.5%;
+  margin-right: 10%;
   margin-top: 2rem;
 }
 
@@ -342,5 +346,111 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .top-word-box {
+    margin-left: 5%;
+  }
+  .grid-container {
+    margin-left: 5%;
+  }
+  .grid-container2 {
+    margin-left: 5%;
+  }
+  .switch-box {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
+  .grid-container > div {
+    margin: 1rem auto;
+  }
+  .grid-container2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
+  .grid-container2 > div {
+    margin: 1rem auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top-word-box {
+    margin-left: 10%;
+    width: 80%;
+    border-bottom: 1px solid var(--text2);
+    height: 60px;
+  }
+  .switch-box {
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .grid-container > div {
+    width: 80%;
+  }
+  .top-banner {
+    height: 300px;
+    margin-top: -13rem;
+  }
+  .grid-container img.icon {
+    margin-left: 35%;
+  }
+  .grid-container .tag {
+    margin-right: 30%;
+  }
+  .grid-container2 > div {
+    width: 80%;
+  }
+  .mid-word-box {
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .grid-container > div {
+    width: 90%;
+  }
+  .grid-container img.icon {
+    margin-left: 35%;
+  }
+  .grid-container .tag {
+    margin-right: 30%;
+  }
+  .grid-container2 > div {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .top-word-box h1 {
+    font-size: 1.5rem;
+  }
+  .grid-container img.icon {
+    margin-left: 30%;
+  }
+  .grid-container .tag {
+    margin-right: 25%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
