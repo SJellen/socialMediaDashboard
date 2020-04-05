@@ -48,12 +48,119 @@ body {
   margin-top: -6.75rem;
 }
 
+.grid-container .tag {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--text2);
+  display: block;
+  margin-top: -1rem;
+  width: 80px;
+  float: right;
+  margin-top: .75rem;
+  margin-right: 4rem;
+  text-align: left;
+}
+
+.grid-container img.icon {
+  margin-left: 5rem;
+}
+
+.grid-container h2 {
+  font-size: 3.25rem;
+  color: var(--text);
+  margin-top: 1rem;
+}
+
+.grid-container h3 {
+  color: var(--text2);
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  margin-top: -2.75rem;
+}
+
+.grid-container .down {
+  color: #dc414c;
+}
+
+.grid-container .up {
+  color: #1db489;
+}
+
+.grid-container h4 {
+  font-size: .8rem;
+}
+
+.grid-container .item1 {
+  position: relative;
+}
+
+.grid-container .item1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: deepskyblue;
+  top: 0px;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-container .item2 {
+  position: relative;
+}
+
+.grid-container .item2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #1ca0f2;
+  top: 0px;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-container .item3 {
+  position: relative;
+}
+
+.grid-container .item3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: -webkit-gradient(linear, right top, left top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to left, #fdc468, #df4996);
+  top: 0px;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-container .item4 {
+  position: relative;
+}
+
+.grid-container .item4::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #c4032a;
+  top: 0px;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 .grid-container > div {
   background-color: var(--cardBG);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-  border: 1px solid red;
   width: 255px;
   border-radius: 5px;
 }
@@ -131,20 +238,15 @@ body {
 
 .switch-box {
   float: right;
-  border: 1px solid red;
-  color: var(--text2);
+  color: #aeb3cb;
   margin-right: 10.5%;
   margin-top: 2rem;
 }
 
 .switch-box h3 {
   font-size: .9rem;
-  margin-right: 5rem;
-}
-
-.switch-box a {
-  float: right;
-  margin-top: -2.25rem;
+  margin-right: 4rem;
+  line-height: 1.5;
 }
 
 .top-word-box {
@@ -166,13 +268,79 @@ body {
   font-weight: 400;
 }
 
-#themeButton {
-  border-radius: 30px;
-}
-
 .mid-word-box {
   color: var(--text);
   margin-left: 10%;
   padding: 2rem 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 25px;
+  float: right;
+  margin-top: -2.5rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #1f212e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-image: none;
+  background-color: #aeb3cb;
+}
+
+input:checked + .slider:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  background-color: none;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: white;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
