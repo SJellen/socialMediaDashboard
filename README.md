@@ -1,4 +1,6 @@
 <h1 align="center">Welcome to socialMediaDashboard 👋</h1>
+
+![screenshot](https://github.com/SJellen/socialMediaDashboard/blob/master/ScreenShot.png)
 <p>
 </p>
 
